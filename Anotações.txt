@@ -17,6 +17,7 @@ Instalações Necessárias
 * NodeJS - nodejs.org
 * angular-cli - npm install -g @angular/cli
 * Typescript - npm install -g typescript  
+* sudo apt install node-typescript
 
 
 Comandos
