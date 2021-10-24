@@ -1,2 +1,11 @@
-<p>cursos Component!</p>
+<p>
+
+    <!-- Interpolação  -->
+    Lista de cursos do portal {{nomeDoPortal}}
+</p>
 <app-curso-detalhe></app-curso-detalhe>
+
+<ul>
+    <!-- Vai buscar todos os itens da variável cursos -->
+    <li *ngFor="let curso of cursos">{{curso}}</li>
+</ul>
