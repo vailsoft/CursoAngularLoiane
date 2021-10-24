@@ -1,0 +1,55 @@
+Blocos principais do Angular
+
+* Componente - O que o usuario vai ver
+* Template
+* Metadata - Processamento das classes
+* Databinding - Dado a ser mostrado na tela
+* Comportamento da view
+* Diretivas - Responsavel pela modificação dos elementos DOM e/ou seu comportamento
+* Roteamento - Responsável pela navegação
+* Servicos - Lógica de negócio
+*Pode ser injetado em outras classes
+* Injeção de dependencias
+
+
+Instalações Necessárias
+
+* NodeJS - nodejs.org
+* angular-cli - npm install -g @angular/cli
+* Typescript - npm install -g typescript  
+
+
+Comandos
+ng new nomedoprojeto
+
+
+
+
+CRIANDO COMPONENTES MANUALMENTE
+1 - Criar diretório com o nome do componente na pasta app ex meuprimeiro
+2 - Criar um arquivo nomedocomponente.component.ts
+3 - Dentro do arquivo ts criamos a classe 
+"export class MeuPrimeiroComponent { }", o export permitirá que a classe seja importada em outros arquivos.
+4 - Acima da classe informamos que a classe é um componente do angular2 ao transpilador, adicionando um decorator (no c# e java é chamado de annotation), o mesmo terá que ser importado inserindo o import correspondente ficando assim:
+
+   import { Component } from "@angular/core";
+
+   @Component({
+       selector: 'meu-primeiro-component',
+       template: ``
+   })
+   export class MeuPrimeiroComponent { 
+
+   }
+
+para podermos usar o componente devemos importar ele e adicionar tambem nas declarations de onde o mesmo vai ser chamado por ex vamos no app.module.ts importar ele lá;
+
+adicionamos esse à lista de imports
+import { MeuPrimeiroComponent } from "./meu-primeiro/meu-primeiro.component";
+
+E nas declarations:
+MeuPrimeiroComponent (Lembrando sempre que separá-los por virgula dos já existentes)
+
+PARA ADICIONAR UM NOVO COMPONENTE AUTOMATICAMENTE
+Só rodar o comando ng g c nomedocomponente
+
